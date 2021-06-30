@@ -1,36 +1,33 @@
 import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import HomeScreen from './src/Homescreen';
+import HomeScreen from './src/screens/Homescreen';
 import {Feather} from '@expo/vector-icons';
 import {Touchable, TouchableOpacity} from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import IndexScreen from './src/screens/IndexScreen';
+import SecondScreen from './src/screens/SecondScreen';
 
 const Navigation = createStackNavigator(
   {
         Home: HomeScreen,
+        Index: IndexScreen,
+        Second: SecondScreen,
   },
   {
-        initialRouteName: "Home",
+        initialRouteName: "Index",
         defaultNavigationOptions: 
         
         {
           
-            title: "Profile",
-            //headerShown: "False",
-            header : null,
+            title: "App",
+            //header : null,
             headerTitleStyle: {
               textAlign: 'left',
-              color: 'white',
-              backgroundColor: 'black',
+              
               fontSize: 30,
                            
-          },
-          headerRight:
-          <TouchableOpacity style={{backgroundColor: 'black',}}>
-              {/*<Feather name="bell" size={30} color="white"/> */}
-              <MaterialCommunityIcons name="bell" size={24} color="white" />
-          </TouchableOpacity>
+          }
         }
   }
 );

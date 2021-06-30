@@ -5,7 +5,6 @@ import { Ionicons } from '@expo/vector-icons';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
  
 const HomeScreen = ()=>{
-    
     return(
         
         <ScrollView style={styles.main}>
@@ -14,7 +13,7 @@ const HomeScreen = ()=>{
                 <MaterialCommunityIcons name="bell" size={30} color="white" style={{ marginRight: 10}} />
             </View>
             <View style={styles.two}>
-                <Image style={styles.img} source={require('../assets/image1.jpg')}/>
+                <Image style={styles.img} source={require('../../assets/image1.jpg')}/>
             </View>
             <View style={{alignItems: 'flex-end', marginRight: 25}}>
             <Ionicons name="create-outline" size={30} color="white" />
@@ -83,7 +82,7 @@ const styles= StyleSheet.create ({
     main: {
         backgroundColor: 'black',
         flex: 1,
-        marginTop: getStatusBarHeight()
+        //marginTop: getStatusBarHeight()
     },
     text: {
         color: 'white',
